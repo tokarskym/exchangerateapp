@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://kit.fontawesome.com/45bda80239.js" crossorigin="anonymous"></script>
+    <title>ExchangeRate App</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h2 class="header-text">Exchange Rate</h2>
+            <i class="fa-solid fa-circle-dollar-to-slot fa-3x logo"></i>
+        </header>
+        <main>
+            <div class="select-menu">
+                <select id="select-currency">
+                    <option value="USD" selected>USD</option>
+                    <option value="CHF">CHF</option>
+                    <option value="EUR">EUR</option>
+                </select>
+            </div>
+            <div class="convert">
+                <div class="number-input">
+                    <input id="exchange-amount" type="number" min="0" oninput="this.value =!!this.value && Math.abs(this.value) >= 0 ? Math.abs(this.value) : null" class="currency-amount input-style" value="">
+                    <p id="info"></p>
+                </div>
+                <div class="loader loader-hidden"></div>
+                <button class="button">Convert</button>
+                <div class="pln-input">
+                    <input id="pln-amount" type="number" class="pln-amount input-style" value="" readonly>
+                    <p id="pln-sign"></p>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="./app.js"></script>
+</body>
+</html>
+
+
