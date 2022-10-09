@@ -24,7 +24,7 @@
             </div>
             <div class="convert">
                 <div class="number-input">
-                    <input id="exchange-amount" type="number" min="0" oninput="this.value =!!this.value && Math.abs(this.value) >= 0 ? Math.abs(this.value) : null" class="currency-amount input-style" value="">
+                    <input id="exchange-amount" type="number" onkeyup="if(this.value<0){this.value= this.value * -1}" class="currency-amount input-style" value="">
                     <p id="info"></p>
                 </div>
                 <div class="loader loader-hidden"></div>
