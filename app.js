@@ -6,6 +6,9 @@ const rateInformation = document.querySelector('#info');
 const plnParagraph = document.querySelector('#pln-sign');
 const loader = document.querySelector('.loader'); 
 
+const checkValue = () => { 
+    exchangeAmount.value = exchangeAmount.value < 0 ? exchangeAmount.value = exchangeAmount.value * -1 : exchangeAmount.value; 
+}
 
 const exchange = () => {
     if (exchangeAmount.value !== '') {
@@ -40,6 +43,4 @@ const enterKey = () => {
 convertButton.addEventListener('click', exchange); 
 currencyType.addEventListener('click', clearInputs); 
 exchangeAmount.addEventListener('keypress', enterKey); 
-
-
-
+exchangeAmount.addEventListener('keyup', checkValue);
