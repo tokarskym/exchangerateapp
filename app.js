@@ -8,7 +8,7 @@ const loader = document.querySelector('.loader');
 
 const checkValue = () => {
   if (exchangeAmount.value < 0) {
-    exchangeAmount.value = exchangeAmount.value * -1
+    exchangeAmount.value = exchangeAmount.value * -1;
   } else {
     exchangeAmount;
   }
@@ -20,12 +20,12 @@ const exchange = () => {
     fetch(`https://api.nbp.pl/api/exchangerates/rates/a/${currencyType.value}/`)
       .then(res => res.json())
       .then(data => {
-        const calculation = (exchangeAmount.value * data.rates[0].mid).toFixed(2)
+        const calculation = (exchangeAmount.value * data.rates[0].mid).toFixed(2); 
         rateInformation.textContent = `1 ${currencyType.value} = ${data.rates[0].mid} PLN`;
         plnParagraph.textContent = `PLN`;
         plnAmount.value = calculation;
         loader.classList.add('loader-hidden');
-      })
+      });
   } else {
     alert("Please fill in amount.");
   }
