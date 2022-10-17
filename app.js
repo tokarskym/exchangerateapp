@@ -12,7 +12,7 @@ const checkValue = () => {
   } else {
     exchangeAmount;
   }
-};
+}
 
 const exchange = () => {
   if (exchangeAmount.value !== '') {
@@ -29,7 +29,7 @@ const exchange = () => {
   } else {
     alert("Please fill in amount.");
   }
-}
+} 
 
 const clearInputs = () => {
   exchangeAmount.value = '';
@@ -44,7 +44,7 @@ const enterKey = () => {
   }
 }
 
-convertButton.addEventListener('click', exchange);
+convertButton.addEventListener('click', exchange); 
 currencyType.addEventListener('click', clearInputs);
 exchangeAmount.addEventListener('keypress', enterKey);
 exchangeAmount.addEventListener('keyup', checkValue);
