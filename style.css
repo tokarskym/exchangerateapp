@@ -12,13 +12,6 @@ input::-webkit-inner-spin-button {
   margin: 0;
 }
 
-::placeholder {
-    color: white; 
-    opacity: 5%; 
-    font-weight: 100;
-    letter-spacing: 14px;
-}
-
 body {
     background: #1C2431;
     font-family: 'Roboto', sans-serif;
