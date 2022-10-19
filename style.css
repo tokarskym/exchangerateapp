@@ -134,7 +134,7 @@ div.number-input p, div.pln-input p {
     .container {
         width: 420px; 
     }
-  }
+}
 
 @media screen and (min-width: 1024px) {
     .button:hover {
@@ -142,6 +142,6 @@ div.number-input p, div.pln-input p {
         background-image: linear-gradient(144deg, rgba(52, 160, 205, 1) 0%, rgba(99, 225, 159, 1) 100%);
         cursor: pointer; 
     }
-  }
+}
 
 
